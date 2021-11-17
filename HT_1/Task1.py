@@ -3,9 +3,9 @@
 stop_cycle = True
 array_list = []
 array_typle = {}
-
+print("We must create a tuple and list. Let's go")
 while stop_cycle:
-    message = input()
+    message = input("Enter a number(q to complete): ")
 
     try:
         message = int(message)
@@ -23,4 +23,3 @@ while stop_cycle:
 
 
 print("List: ",array_list, "\nTuple: ", tuple(array_list))
-

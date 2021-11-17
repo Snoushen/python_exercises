@@ -3,9 +3,11 @@ array_list = []
 
 print("Please enter a namber(q or Q for quit)")
 while stop_cycle:
+
     message = input()
 
     try:
+        print("Your number ")
         message = int(message)
         array_list.append(message)
     except ValueError:
@@ -23,4 +25,3 @@ print("Enter the number to check on the list: ")
 check_number = int(input()) in array_list
 
 print(check_number)
-
