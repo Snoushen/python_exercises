@@ -3,7 +3,7 @@
 #        Sample decimal number: 30, 4
 #        Expected output: 1e, 04
 ####################################################
-
+ 
 print("Enter a decimal number: ")
 decimal1, decimal2 = int(input()),int(input())
 print("Sample decimal number: ", end = "")
