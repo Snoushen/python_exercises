@@ -8,6 +8,6 @@ number_of_element = input("Введите длину кортежа: ")
 
 result = {}
 
-for element in range(1+int(number_of_element)):
+for element in range(0, (1+int(number_of_element))):
     result[element] = element*element
 print(result)
