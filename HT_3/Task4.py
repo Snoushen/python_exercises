@@ -11,7 +11,7 @@ def function_2(function):
     return " ім'я" + function
 
 def function_3(string_name):
-    return ", =  " + function
+    return ", =  " + string_name
 
 def function_4(name):
     answer_text = function_1(function_2(function_3(name)))
