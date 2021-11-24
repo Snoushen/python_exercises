@@ -10,7 +10,7 @@ def function_1(function):
 def function_2(function):
     return " ім'я" + function
 
-def function_3(function):
+def function_3(string_name):
     return ", =  " + function
 
 def function_4(name):
@@ -19,5 +19,3 @@ def function_4(name):
 
 print("Як тебе звати?")
 function_4(input())
-
-
