@@ -13,6 +13,6 @@ def bank(money,years,percents=10):
 
 input_money = int(input("How much money you would put? "))
 input_years = int(input("For how much years? "))
-input_percents = int(input("Percent in year: "))
 
-print(bank(input_money,input_years,input_percents))
+
+print(bank(input_money,input_years))
