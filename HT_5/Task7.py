@@ -14,11 +14,18 @@
    1
    .......
 """
+"""
+        for i in object:
+            yield i
+            if i == object[-1]:
+                object = iter(object)
+"""
 
 def generator(object):
     while True:
         for i in object:
             yield i
+
 
 for i in generator([1, 2, 3]):
     print(i)
