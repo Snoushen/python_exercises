@@ -7,7 +7,7 @@
        якщо введено неправильну пару ім'я/пароль і <silent> == <True> - функція вертає <False>,
             інакше (<silent> == <False>) - породжується виключення LoginException
 """
-class LoginException(Exception):
+class LoginException(ValueError):
     pass
 
 def user(username,password,silent=False):
@@ -15,17 +15,15 @@ def user(username,password,silent=False):
     list_user = [["Kostia","123"],["Alex","321"],["Dima","a"],["Yarik","yarik"],["Sasha","sahsa123"]]
 
     try:
-        list_user.index(value_check)
-        silent = True
+        flag = 0
+        for value in list_user:
+            if value_check == value:
+                flag = 1
+        if flag == 0:
+            raise LoginException
     except LoginException:
-        pass
-    return silent
+        return False
+    else:
+        return True
 
-print(user("Kostia","1234"))
-
-
-
-
-
-
-
+print(user("Kostia","123"))
