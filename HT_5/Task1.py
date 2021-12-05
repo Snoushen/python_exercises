@@ -27,7 +27,7 @@ def user(username,password,silent=False):
         else:
             return True
     except LoginException:
-        print("Error: wrong name or password")
+        return "Error: wrong name or password"
 
 
 
@@ -35,4 +35,4 @@ def user(username,password,silent=False):
 
 print(user("Kostia","123"))
 print(user("Kostiaaaa","123",silent=True))
-user("Kostiaaaa","123")
+print(user("Kostiaaaa","123"))
