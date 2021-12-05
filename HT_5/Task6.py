@@ -14,13 +14,13 @@ def custom_range(stop,start=None,step=1):
     try:
         if step > 0:
             while start < stop:
-                start += step
                 yield start
+                start += step
+
         if step < 0:
             while start > stop:
-                start += step
                 yield start
-
+                start += step
     except ValueError:
         pass
 
