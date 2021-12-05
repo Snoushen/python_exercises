@@ -9,8 +9,8 @@ def custom_range(stop,start=None,step=1):
         raise ValueError
     if start != None:
         stop, start = start, stop
-
-    print(start," ",stop)
+    else:
+        start = 0
     try:
         if step > 0:
             while start < stop:
@@ -24,7 +24,5 @@ def custom_range(stop,start=None,step=1):
     except ValueError:
         pass
 
-print(list(custom_range(0,10)))
-print(list(custom_range(-10,10,2)))
-print(list(custom_range(-20,-10,2)))
-print(list(custom_range(10,0)))
+for i in custom_range(10):
+    print(i)
