@@ -7,7 +7,7 @@
        якщо введено неправильну пару ім'я/пароль і <silent> == <True> - функція вертає <False>,
             інакше (<silent> == <False>) - породжується виключення LoginException
 """
-class LoginException(ValueError):
+class LoginException(Exception):
     pass
 
 def user(username,password,silent=False):
@@ -20,10 +20,19 @@ def user(username,password,silent=False):
             if value_check == value:
                 flag = 1
         if flag == 0:
-            raise LoginException
+            if silent == True:
+                return False
+            else:
+                raise LoginException
+        else:
+            return True
     except LoginException:
-        return False
-    else:
-        return True
+        print("Error: wrong name or password")
+
+
+
+
 
 print(user("Kostia","123"))
+print(user("Kostiaaaa","123",silent=True))
+user("Kostiaaaa","123")
