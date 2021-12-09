@@ -9,8 +9,6 @@
 символів відцентрувати щодо середини файла і взяти необхідну кількість. В разі необхідності заокруглення одного чи обох параметрів - дивіться на свій розсуд.
 """
 
-import os
-
 def middle(some_string):
     middle_index = int((len(some_string) / 2))
     for x in range(len(some_string)):
@@ -21,8 +19,6 @@ def middle(some_string):
     return None
 
 def strange_fun(filename,char):
-    cwd = os.getcwd()  # Get the current working directory (cwd)
-    files = os.listdir(cwd)
 
     with open(f'{filename}','r') as file:
         data_all_symbol = file.read()
