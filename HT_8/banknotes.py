@@ -34,8 +34,6 @@ def method(M, coins):
 
 
     while M - path > 0:
-        if path == 0:
-            raise ValueError("У банка недостатньо коштів для видачі")
         M -= path
         nums, path = rec_change(M, coins)
         del_bankn.append(path)
@@ -44,15 +42,18 @@ def method(M, coins):
     return del_bankn
 
 def del_banknonte(nominal):
+
     print(nominal)
     with open(outpath / "bank_money.json", "r+") as file:
         data_collector = json.load(file)
-        for i in data_collector:
-            for x in i:
-                for y in nominal:
-                    if int(x) == y :
-                        i[x] -= 1
-
+        for a in nominal:
+            for b in data_collector:
+                for c in b:
+                    if a == int(c):
+                        b[c] -= 1
+                    if b[c] < 0:
+                        print('error: В банка недостатньо номіналу для видачі спробуйте ще раз')
+                        return
 
         file.seek(0,0)
         json.dump(data_collector,file,indent=4)
